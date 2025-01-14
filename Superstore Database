@@ -1,3 +1,4 @@
+DATABASE:
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
@@ -28,6 +29,7 @@ VALUES
     
 -- © Copyright 2025 Break Into Tech  --
 
+QUERY:
 --Select the sum of prices for each item
 SELECT SUM(price), item_name
 FROM superstore
