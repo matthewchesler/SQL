@@ -1,0 +1,19 @@
+# For this project, I downloaded Spotify data from Kaggle.
+# Then I created a table to insert Spotify data into.
+# Finally, I performed analytics on the data using SQL. 
+
+--Average danceability for each artist
+SELECT artist_name, ROUND(AVG(danceability), 2) AS average_danceability
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name
+ORDER BY AVG(danceability) DESC;
+
+--Longest song released
+SELECT artist_name, track_name, MAX(duration_ms) AS song_duration_ms
+FROM BIT_DB.Spotifydata;
+
+--Most popular artists
+SELECT artist_name, ROUND(AVG(popularity), 2) AS average_popularity
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name
+ORDER BY AVG(popularity) DESC;
